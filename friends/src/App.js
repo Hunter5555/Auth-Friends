@@ -1,22 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Routes from './utils/Routes';
-import Header from "./Header";
-import { Container } from 'semantic-ui-react';
-import "semantic-ui-css/semantic.min.css";
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
+import FriendsList from './components/FriendsList';
+import Login from './components/Login';
+import PrivateRoute from './components/PrivateRoute';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Container>
-        <div className="App">
-          <Routes />
+    <div className="App">
+      <Router>
+        <div>
+          <Link to ="/login">Login</Link>
         </div>
-      </Container>
-    </>
+
+     <Switch>
+     <PrivateRoute path="/protected" component={FriendsList} /> 
+    <Route path="/login" component={Login} />
+    <Route component={Login} />
+     </Switch>
+
+      </Router>
+    </div>
   );
 }
 

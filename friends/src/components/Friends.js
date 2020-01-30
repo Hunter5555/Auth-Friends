@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'semantic-ui-react';
-import axiosWithAuth from '../../utils/axiosWithAuth';
+import axiosWithAuth from '../utils/axiosWithAuth';
 
 const Friends = ({ friend }) => {
   const handleDelete = e => {
