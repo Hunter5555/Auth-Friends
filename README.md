@@ -1,4 +1,5 @@
 README for Auth-Friends
+
 This project utilizes Axios authorization to assign and record friends added to the friends list in the project. 
 The POST requests found in the handleSubmit in the FriendsForm file assigns a new friend to the list. When the event is triggered in the handle submit,
 a new friend is added. 
